@@ -27,6 +27,15 @@ import mysql from "mysql";
 // Server = tcp: bttask.database.windows.net, 1433; Database = bttask_db; Uid = bttask; Pwd = { "50155V85AEJHY2G4$"}; Encrypt = yes; TrustServerCertificate = no;
 // Connection Timeout = 30;
 
+// var conn = mysql.createConnection({
+//   host: "bttaskmanager-server.mysql.database.azure.com",
+//   user: "jufbgypnlr",
+//   password: "{your_password}",
+//   database: "{your_database}",
+//   port: 3306,
+//   ssl: { ca: fs.readFileSync("{ca-cert filename}") },
+// });
+
 import "dotenv/config";
 export const connection = mysql.createConnection({
   host: process.env.MYSQL_HOST_NAME,
